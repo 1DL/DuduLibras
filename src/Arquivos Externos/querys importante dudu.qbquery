@@ -1,0 +1,12 @@
+﻿SELECT * FROM tb_log_sessao where dt_inicio_sessao like '%28/11/2014%';
+
+SELECT * FROM tb_log_permanente t;
+
+select u.nm_usuario as Jogador, cd_log as 'Cód.Log', dt_inicio_sessao as 'Data Início',dt_fim_sessao as 'Data Fim', qt_pontos_totais_sessao as 'Pont. Sessão',qt_pontos_totais_nv11 as 'Pont. Memória1', qt_pontos_ganhos_nv11 as 'Pont. Ganhos Memória1', qt_pontos_perdidos_nv11 as 'Pont. Perdidos Memoria1',qt_acertos_nv11 as 'Acertos Memoria1', qt_erros_nv11 as 'Erros Memoria1'from tb_log_sessao as l inner join tb_usuario as u on l.cd_usuario = u.cd_usuario where u.nm_usuario = 'teste' order by l.cd_log desc;
+
+
+
+select l.cd_log  as 'Código', u.nm_usuario as Jogador, l.dt_inicio_sessao as 'Inicio', l.dt_fim_sessao as 'Término', l.dt_tempo_total_sessao as 'Tempo total Jogando', l.qt_pontos_totais_sessao as 'Pontuação Sessão', l.qt_pontos_nv11 as 'Pontos Memória 1',
+
+
+select u.nm_usuario as Jogador, l.cd_log as 'Cod. Log', l.dt_inicio_sessao as 'Data Inicio', l.dt_fim_sessao as 'Data Fim', l.dt_tempo_total_sessao as 'Tempo Total', l.qt_pontos_totais_sessao as 'Pont. Sessao', l.qt_pontos_totais_nv11 as 'Pt. Memória1', l.qt_pontos_ganhos_nv11 as 'Pt. Ganhos Memória1, l.qt_pontos_perdidos_nv11 as 'Pt. Perdidos Memória1', l.qt_acertos_nv11 as 'Acertos Memória1', l.qt_erros_nv11 as 'Erros Memória1',l.qt_pontos_totais_atv11 as 'Pt. Atividade1', l.qt_pontos_ganhos_atv11 as 'Pt. Ganhos Atividade1, l.qt_pontos_perdidos_atv11 as 'Pt. Perdidos Atividade1', l.qt_acertos_atv11 as 'Acertos Atividade1', l.qt_erros_atv11 as 'Erros Atividade1', l.qt_vidas_perdidas_atv11 as 'Vidas Perd. Atividade1, l.qt_vidas_recuperadas as 'Vidas Recu. Atividade1,l.qt_pontos_totais_nv12 as 'Pt. Memória2', l.qt_pontos_ganhos_nv12 as 'Pt. Ganhos Memória2, l.qt_pontos_perdidos_nv12 as 'Pt. Perdidos Memória2', l.qt_acertos_nv12 as 'Acertos Memória2', l.qt_erros_nv12 as 'Erros Memória2',l.qt_pontos_totais_atv12 as 'Pt. Atividade2', l.qt_pontos_ganhos_atv12 as 'Pt. Ganhos Atividade2, l.qt_pontos_perdidos_atv12 as 'Pt. Perdidos Atividade2', l.qt_acertos_atv12 as 'Acertos Atividade2', l.qt_erros_atv12 as 'Erros Atividade2', l.qt_vidas_perdidas_atv12 as 'Vidas Perd. Atividade2, l.qt_vidas_recuperadas as 'Vidas Recu. Atividade2 from tb_log_sessao as l inner join tb_usuario as u on l.cd_usuario = u.cd_usuario where u.nm_usuario ='luiz' order by l.cd_log desc;
