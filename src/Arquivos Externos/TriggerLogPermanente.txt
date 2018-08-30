@@ -1,0 +1,10 @@
+delimiter $
+create trigger criaLogPerm
+after insert on tb_usuario
+for each row
+  begin
+    declare codUsuario int;
+    set codUsuario = (select cd_usuario from tb_usuario order by cd_usuario desc limit 1);
+    insert into tb_log_permanente (cd_usuario) values (codUsuario);
+  end$
+delimiter;
